@@ -1,12 +1,8 @@
 import java.util.Scanner;
 
 public class checkPrime{
-    public static void main(String[] args) {
-        
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int n = sc.nextInt();
 
+    static String prime(int n){
         int count = 0;
         for(int i=1; i<=n; i++){
             if(n%i == 0){
@@ -14,10 +10,17 @@ public class checkPrime{
             }
         }
         if(count == 2){
-            System.out.print("Number is Prime");
+            return "Number is Prime";
         }
         else{
-            System.out.print("Number is not Prime");
+            return "Number is not Prime" ;
         }
+    }
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        System.out.print(prime(n));
     }
 }
